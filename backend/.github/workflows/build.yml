@@ -1,0 +1,24 @@
+name: Ecommerce
+
+on: 
+  push:
+    pull request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+       
+
+    steps:
+      - names: checkout Repo
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      
+      - name: Install dependencies
+        run: pip install -r requirement.txt
