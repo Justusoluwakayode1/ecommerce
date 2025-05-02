@@ -3,8 +3,8 @@ name: Ecommerce
 on: 
   push: 
     branches: [master]
-    pull request:
-            branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
   build:
 
@@ -13,8 +13,8 @@ jobs:
        
 
     steps:
-      - names: checkout Repo
-      - uses: actions/checkout@v4
+      - name: checkout Repo
+        uses: actions/checkout@v4
 
       - name: Set up Python 
         uses: actions/setup-python@v5
